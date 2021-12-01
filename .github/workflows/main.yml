@@ -42,6 +42,4 @@ jobs:
             dir
             more jira_publickey.pem
             more jira_privatekey.pcks8        
-      # Runs a set of commands using the runners shell
-      - name: run main application
-        run: mvn clean compile exec:java
+
