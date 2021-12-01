@@ -1,0 +1,8 @@
+com\atlassian\oauth\client\example\OAuthClient.class
+com\atlassian\oauth\client\example\PropertiesClient.class
+com\atlassian\oauth\client\example\JiraOAuthTokenFactory.class
+com\atlassian\oauth\client\example\JiraOAuthClient.class
+com\atlassian\oauth\client\example\Command.class
+com\atlassian\oauth\client\example\JiraOAuthGetAccessToken.class
+com\atlassian\oauth\client\example\JiraOAuthGetTemporaryToken.class
+com\atlassian\oauth\client\example\ClientMain.class
