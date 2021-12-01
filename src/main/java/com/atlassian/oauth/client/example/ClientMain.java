@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ClientMain {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] arg) throws Exception {
         String args[] =  {"requestToken",""};
 
         PropertiesClient propertiesClient = new PropertiesClient();
