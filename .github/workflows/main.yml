@@ -13,6 +13,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /home/runner/work/dance/dance/target
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -27,19 +30,10 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: maven project build maven project
-        run: mvn clean test
-        
-      - name: step 1 executing first ssll command
-        run: openssl genrsa -out jira_privatekey.pem 1024
-        
-      - name: step 2 executing second ssl command
-        run: yes in |  openssl req -newkey rsa:1024 -x509 -key jira_privatekey.pem -out jira_publickey.cer -days 365  
+        run: mvn clean test  
+
         
       - name: step 3 executing rest command
         run: |
-            openssl pkcs8 -topk8 -nocrypt -in jira_privatekey.pem -out jira_privatekey.pcks8
-            openssl x509 -pubkey -noout -in jira_publickey.cer  > jira_publickey.pem
-            dir
-            more jira_publickey.pem
-            more jira_privatekey.pcks8        
+            java -jar OAuthTutorialClient-1.0.jar requestToken        
 
