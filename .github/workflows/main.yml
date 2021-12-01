@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /home/runner/work/dance/dance/target
+        working-directory: /home/runner/work/git_jira_aws_poc/git_jira_aws_poc/target
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,5 +31,6 @@ jobs:
         
       - name: step 3 executing rest command
         run: |
-            java -jar OAuthTutorialClient-1.0.jar requestToken        
+            java -jar OAuthTutorialClient-1.0.jar requestToken
+            dir
 
